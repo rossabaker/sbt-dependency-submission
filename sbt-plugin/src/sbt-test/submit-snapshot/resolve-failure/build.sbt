@@ -9,17 +9,17 @@ inThisBuild(
     version := "1.2.0-SNAPSHOT",
     // use Ivy because Coursier does not allow several classifier on the same dep
     useCoursier := false,
-    scalaVersion := "2.13.8"
+    scalaVersion := "2.13.11"
   )
 )
 
 val a = project
   .in(file("."))
   .settings(
-    scalaVersion := "2.13.8"
+    scalaVersion := "2.13.11"
   )
 
-// Update on b fails, because b on 2.12.16 depends on a on 2.13.8
+// Update on b fails, because b on 2.12.16 depends on a on 2.13.11
 val b = project
   .in(file("b"))
   .settings(

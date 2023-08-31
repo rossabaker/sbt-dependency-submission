@@ -9,17 +9,17 @@ inThisBuild(
     version := "1.2.0-SNAPSHOT",
     // use Ivy because Coursier does not allow several classifier on the same dep
     useCoursier := false,
-    scalaVersion := "2.13.8"
+    scalaVersion := "2.13.11"
   )
 )
 
 val a = project
   .in(file("."))
   .settings(
-    scalaVersion := "2.13.8",
+    scalaVersion := "2.13.11",
     crossScalaVersions := Seq(
       "2.12.16",
-      "2.13.8",
+      "2.13.11",
       "3.1.3"
     ),
     libraryDependencies ++= Seq(
@@ -38,7 +38,7 @@ val a = project
 val b = project
   .in(file("b"))
   .settings(
-    scalaVersion := "2.13.8"
+    scalaVersion := "2.13.11"
   )
   .dependsOn(a)
 
