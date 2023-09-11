@@ -8,7 +8,7 @@ jobs:
     name: Release sbt plugin
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: coursier/setup-action@v1.2.0-M3
         with:
           apps: sbt
